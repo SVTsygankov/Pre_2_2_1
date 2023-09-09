@@ -38,6 +38,10 @@ public class User {
       car.setUser(this);
    }
 
+   public Car getCar() {
+      return car;
+   }
+
    public Long getId() {
       return id;
    }

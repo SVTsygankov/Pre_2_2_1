@@ -21,10 +21,10 @@ public class MainApp {
    //   userService.add(new User("User3", "Lastname3", "user3@mail.ru"));
    //   userService.add(new User("User4", "Lastname4", "user4@mail.ru"));
 
-      User user1 = new User("User4", "Lastname4", "user4@mail.ru");
-      Car car = new Car("BMW", 5);
-      user1.setCar(car);
-      userService.add(user1);
+   //   User user1 = new User("User4", "Lastname4", "user4@mail.ru");
+   //   Car car = new Car("BMW", 5);
+   //   user1.setCar(car);
+   //   userService.add(user1);
 
       List<User> users = userService.listUsers();
       for (User user : users) {
@@ -33,6 +33,8 @@ public class MainApp {
          System.out.println("Last Name = "+user.getLastName());
          System.out.println("Email = "+user.getEmail());
          System.out.println();
+
+         System.out.println(user.getCar());
       }
 
       context.close();
