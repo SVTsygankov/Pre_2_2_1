@@ -30,9 +30,6 @@ public class UserDaoImp implements UserDao {
    @Override
    public  List<User> listUserOwningModelAndSeries(String m, int s) {
 
-   //   String HQL = "FROM User As u JOIN u.car AS c WHERE c.model = 'Opel'";
-      //FROM Parent AS p " +
-      //"WHERE p.name = :name AND p.age = :age
       String HQL = "FROM User AS u WHERE u.car.model = :paramModel AND u.car.series = :paramSeries";
       Query query = sessionFactory.getCurrentSession().createQuery(HQL);
       query.setParameter("paramModel", m);
