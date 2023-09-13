@@ -9,4 +9,6 @@ public interface UserService {
     List<User> listUsers();
 
     List<User> listUserOwningModelAndSeries(String m, int s);
+
+    User getUser(long id);
 }

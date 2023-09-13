@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import java.util.Collections;
 import java.util.List;
 
 @Repository
@@ -27,6 +28,14 @@ public class UserDaoImp implements UserDao {
        TypedQuery<User> query=sessionFactory.getCurrentSession().createQuery("from User");
        return query.getResultList();
    }
+   @Override
+   public User getUser(long id){
+      User u;
+      u = sessionFactory.getCurrentSession().get(User.class, id);
+      System.out.println("User = " + u);
+      return u;
+   }
+
    @Override
    public  List<User> listUserOwningModelAndSeries(String m, int s) {
 
