@@ -43,6 +43,7 @@ public class User {
 
    public void setCar(Car car) {
       this.car = car;
+      System.out.println("Car = " + car);
       car.setUser(this);
    }
 
@@ -88,8 +89,7 @@ public class User {
               "id=" + id +
               ", firstName='" + firstName + '\'' +
               ", lastName='" + lastName + '\'' +
-              ", email='" + email + '\'' +
-              ", car=" + car +
+              ", email='" + email  +
               '}';
    }
 }

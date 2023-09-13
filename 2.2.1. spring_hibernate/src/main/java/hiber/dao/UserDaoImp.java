@@ -4,10 +4,8 @@ import hiber.model.User;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
-import java.util.Collections;
 import java.util.List;
 
 @Repository
@@ -30,10 +28,7 @@ public class UserDaoImp implements UserDao {
    }
    @Override
    public User getUser(long id){
-      User u;
-      u = sessionFactory.getCurrentSession().get(User.class, id);
-      System.out.println("User = " + u);
-      return u;
+      return sessionFactory.getCurrentSession().get(User.class, id);
    }
 
    @Override
