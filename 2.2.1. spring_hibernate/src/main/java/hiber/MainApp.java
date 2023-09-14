@@ -15,8 +15,20 @@ public class MainApp {
 
       UserService userService = context.getBean(UserService.class);
 
-      List<User> users = userService.listUserOwningModelAndSeries("Opel", 10);
+      List<User> users1 = userService.listUserOwningModelAndSeries("Opel", 1);
+      print(users1);
+      List<User> users2 = userService.listUserOwningModelAndSeries("Opel", 10);
+      print(users2);
+      List<User> users3 = userService.listUserOwningModelAndSeries("BMW", 5);
+      print(users3);
+      List<User> users4 = userService.listUserOwningModelAndSeries("Mercedes", 200);
+      print(users4);
+      List<User> users5 = userService.listUserOwningModelAndSeries("Mazda", 5);
+      print(users5);
 
+      context.close();
+   }
+   public static void print(List<User> users) {
       for (User user : users) {
          System.out.println("User  = " + user);
          System.out.println("Car   = " + user.getCar());
@@ -24,7 +36,5 @@ public class MainApp {
 
       System.out.println("Длина списка:" + users.size());
       if(users.size() == 0) System.out.println("У пользователей нет таких авто.");
-
-      context.close();
    }
 }
