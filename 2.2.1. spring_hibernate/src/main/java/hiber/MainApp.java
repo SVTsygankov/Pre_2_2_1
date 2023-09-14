@@ -36,5 +36,6 @@ public class MainApp {
 
       System.out.println("Длина списка:" + users.size());
       if(users.size() == 0) System.out.println("У пользователей нет таких авто.");
+      System.out.println();
    }
 }
