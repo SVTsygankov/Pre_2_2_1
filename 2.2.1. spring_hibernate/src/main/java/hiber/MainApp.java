@@ -23,19 +23,19 @@ public class MainApp {
       print(users3);
       List<User> users4 = userService.listUserOwningModelAndSeries("Mercedes", 200);
       print(users4);
-      List<User> users5 = userService.listUserOwningModelAndSeries("Mazda", 5);
-      print(users5);
+
 
       context.close();
    }
    public static void print(List<User> users) {
       for (User user : users) {
-         System.out.println("User  = " + user);
-         System.out.println("Car   = " + user.getCar());
+          System.out.println("Id = "+user.getId());
+          System.out.println("First Name = "+user.getFirstName());
+          System.out.println("Last Name = "+user.getLastName());
+          System.out.println("Email = "+user.getEmail());
+          System.out.println("Car = model: " + user.getCar().getModel() + "  series: " + user.getCar().getSeries());
+          System.out.println();
       }
-
-      System.out.println("Длина списка:" + users.size());
-      if(users.size() == 0) System.out.println("У пользователей нет таких авто.");
-      System.out.println();
    }
 }
+

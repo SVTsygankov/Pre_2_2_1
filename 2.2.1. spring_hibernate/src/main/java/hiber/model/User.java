@@ -38,17 +38,23 @@ public class User {
       this.email = email;
    }
 
-   public Car getCar() {
-      return car;
+   public Long getId() {
+      return id;
    }
 
-   @Override
-   public String toString() {
-      return "User{" +
-              "id=" + id +
-              ", firstName='" + firstName + '\'' +
-              ", lastName='" + lastName + '\'' +
-              ", email='" + email  +
-              '}';
+   public String getFirstName() {
+      return firstName;
+   }
+
+   public String getLastName() {
+      return lastName;
+   }
+
+   public String getEmail() {
+      return email;
+   }
+
+   public Car getCar() {
+      return car;
    }
 }

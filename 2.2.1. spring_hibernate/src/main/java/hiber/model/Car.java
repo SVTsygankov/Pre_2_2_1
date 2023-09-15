@@ -8,7 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import java.io.Serializable;
 
 @Entity
 @Table(name = "car")
@@ -31,11 +30,11 @@ public class Car {
 
     public Car() {}
 
-    @Override
-    public String toString() {
-        return "Car{" +
-                ", model='" + model + '\'' +
-                ", series=" + series +
-                '}';
+    public String getModel() {
+        return model;
+    }
+
+    public int getSeries() {
+        return series;
     }
 }
